@@ -1,0 +1,91 @@
+:root{
+    --colorGrisInterfaz: #999999;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+}
+.contenedor-niveles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+}
+.niveles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border: 3px solid #b2b2b2;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--colorGrisInterfaz);
+    transition-property: border;
+    transition-duration: 0.3s;
+}
+.contenedor-barras-de-progreso{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 5px;
+    width: 326px;
+    background-color: #b2b2b2;
+    z-index: -1;
+}
+.barras{
+    display: block;
+    height: 5px;
+    width: 33%;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(.04,0,.83,.89);
+}
+.contenedor-botones{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 30px;
+}
+.botones{
+    height: 35px;
+    width: 100px;
+    background-color: rgb(31, 159, 210);
+    border: 0px;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+.boton-desactivado{
+    height: 35px;
+    width: 100px;
+    background-color: rgb(31, 159, 210);
+    border: 0px;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #999999;
+    cursor: no-drop;
+}
+#nivel-activo{
+    border: 3px solid rgb(31, 159, 210);
+}
+#boton-apretado{
+    transform: scale(0.98);
+}
+#barra-activa{
+    background-color: rgb(31, 159, 210)
+}
